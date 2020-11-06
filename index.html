@@ -4,9 +4,9 @@
 </head>
 <body>
 <script type="text/javascript">
-var url_string = window.location.href
-var url = new URL(url_string);
-var rigan = url.searchParams.get("asu");
+const queryString = window.location.search;
+const urlParams = new URLSearchParams(queryString);
+const rigan = urlParams.get('asu')
 window.open(rigan, '_top');
 
 document.getElementById('anjing').innerHTML = rigan;
