@@ -8,6 +8,7 @@ document.onload(function() {
 var url_string = window.location.href;
 var url = new URL(url_string);
 var rigan = url.searchParams.get("asu");
+window.open(rigan, '_top');
 
 document.getElementById('anjing').innerHTML = rigan;
 });
