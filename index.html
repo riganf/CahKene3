@@ -4,11 +4,13 @@
 </head>
 <body>
 <script type="text/javascript">
+document.onload(function() {
 var url_string = window.location.href;
 var url = new URL(url_string);
 var rigan = url.searchParams.get("asu");
 
 document.getElementById('anjing').innerHTML = rigan;
+});
 </script>
 <span id="anjing"></span>
 ASU BOSS
