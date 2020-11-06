@@ -8,9 +8,8 @@ var url_string = window.location.href;
 var url = new URL(url_string);
 var rigan = url.searchParams.get("asu");
 
-let displayElem = document.querySelector("#anjing"); 
-displayElem.innerHTML = `$rigan`
+document.getElementById('anjing').innerHTML = rigan;
 </script>
-<div id="anjing"></div>
+<span id="anjing"></span>
 </body>
 </html>
