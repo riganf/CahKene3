@@ -5,7 +5,7 @@
 <body>
 <script type="text/javascript">
 var vars = {};
-    var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
+    var parts = window.location.href, function(m,key,value) {
         vars[key] = value;
     });
 var rigan = vars["asu"];
