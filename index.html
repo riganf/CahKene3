@@ -1,13 +1,16 @@
 <html>
 <head>
-<title>Redirecting...</title>
+<title>Generate Link...</title>
 </head>
 <body>
 <script type="text/javascript">
 const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
-const rigan = urlParams.get('asu')
-window.open(rigan, '_top');
+const rigan = urlParams.get('asu');
+if (rigan) {
+  window.open(rigan, '_top');
+}
 </script>
+<font style="font-size: 20px">PLEASE WAIT...</font>
 </body>
 </html>
