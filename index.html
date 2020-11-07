@@ -22,6 +22,9 @@
     var jancukk = atob(jancuk);
     var jancukkk = atob(jancukk)
  		var counter = 6;
+ 		function getLink(){
+ 		  window.open(jancukkk, "_top");
+ 		}
 		function countDown(){
 			if(counter >= 0){
 				document.getElementById("timer").innerHTML = counter;
@@ -36,7 +39,7 @@
 		}
  
 		function download(){
-			document.getElementById("link").innerHTML = "<a href='"+ jancukkk +"'><button class='btn'>Continue</button></a>";
+			document.getElementById("link").innerHTML = "<button onclick='getLink()' class='btn'>Continue</button>";
 		}
 	</script>
 </head>
