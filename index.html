@@ -1,16 +1,85 @@
 <html>
 <head>
-<title>Generate Link...</title>
+	<title>Generate Link...</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+	<script>
+        addEventListener("load", function () {
+            setTimeout(hideURLbar, 0);
+        }, false);
+
+        function hideURLbar() {
+            window.scrollTo(0, 1);
+        }
+    </script>
+    <link rel="stylesheet" href="./css/style.css" type="text/css" media="all">
+    <link rel="stylesheet" href="./css/font-awesome.min.css" type="text/css" media="all">
+	<script type="text/javascript">
+	  const queryString = window.location.search;
+    const urlParams = new URLSearchParams(queryString);
+    var rigan = urlParams.get('asu');
+ 		var counter = 6;
+		function countDown(){
+			if(counter >= 0){
+				document.getElementById("timer").innerHTML = counter;
+			} else {
+				download();
+				return;
+			}
+			counter -=1;
+ 
+			var counter2 = setTimeout("countDown()",1000);
+			return;
+		}
+ 
+		function download(){
+			document.getElementById("link").innerHTML = "<a href='"+ rigan +"' target='_blank'><button class='btn'>Continue</button></a>";
+		}
+	</script>
 </head>
-<body>
-<script type="text/javascript">
-const queryString = window.location.search;
-const urlParams = new URLSearchParams(queryString);
-const rigan = urlParams.get('asu');
-if (rigan) {
-  window.open(rigan, '_top');
-}
-</script>
-<font style="font-size: 20px">ERROR! Parameters Not Found...</font>
+<body onload="countDown();">
+	
+	<section class="main">
+	<div class="layer">
+		
+		<div class="bottom-grid">
+			<div class="logo">
+				<h1><a href="">Generate Link!!!</a></h1>
+			</div>
+		</div>
+		<div class="content-w3ls">
+			<div id="waktu" class="text-center" style="color:#eee; font-size: 20px">
+				Link will appear in the<br /><br />
+				<span id="timer" style="font-size: 50px"></span>
+			</div>
+			<div class="content-bottom">
+					<div class="wthree-field">
+						<span id="link"></span><br />
+					</div>
+			</div>
+			<div class="text-center" style="color:#eee; font-size: 20px">
+				<br />If you like movie, you can join to channel telegram: <a href="https://t.me/PSAonGdrive" style="color:#ebae34">@PSAonGdrive</a>
+			</div>
+		</div>
+		<div class="bottom-grid1">
+			<div class="links">
+				<ul class="links-unordered-list">
+					<li class="">
+						<a href="" target="_blank">Facebook</a>
+					</li>
+					<li class="">
+						<a href="" target="_blank">Instagram</a>
+					</li>
+					<li class="">
+						<a href="" target="_blank">Whatsapp</a>
+					</li>
+				</ul>
+			</div>
+			<div class="copyright">
+				<p>© 2020 LenteraMalam. All rights reserved
+				</p>
+			</div>
+		</div>
+</section>
 </body>
 </html>
