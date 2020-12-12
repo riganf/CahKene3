@@ -20,10 +20,10 @@
     const urlParams = new URLSearchParams(queryString);
     var rigan = urlParams.get('asu');
     var jmbt = atob(rigan)
-    var memek = CryptoJS.AES.decrypt(jmbt, "BacotKauAsu")
+    var memek = CryptoJS.AES.decrypt(jmbt);
     var jancuk = atob(rigan);
     var jancukk = atob(jancuk);
-    var jancukkk = atob(jancukk)
+    var jancukkk = atob(jancukk);
  		var counter = 4;
  		function getLink(){
  		  window.open(memek, "_top");
