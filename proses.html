@@ -20,7 +20,7 @@
     const urlParams = new URLSearchParams(queryString);
     var rigan = urlParams.get('asu');
     var jmbt = atob(rigan)
-    var memek = CryptoJS.AES.decrypt(jmbt, "BacotKauAsu").toString(CryptoJS.enc.Utf8);
+    var memek = CryptoJS.AES.decrypt(jmbt, "BacotKauAsu")
     var jancuk = atob(rigan);
     var jancukk = atob(jancuk);
     var jancukkk = atob(jancukk)
