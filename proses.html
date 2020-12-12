@@ -14,7 +14,35 @@
     </script>
     <link rel="stylesheet" href="./css/style.css" type="text/css" media="all">
     <link rel="stylesheet" href="./css/font-awesome.min.css" type="text/css" media="all">
-	<script type="text/javascript" src="haha.js">
+  <script type="text/javascript" src="aes.js"></script>
+	<script type="text/javascript">
+	  const queryString = window.location.search;
+    const urlParams = new URLSearchParams(queryString);
+    var rigan = urlParams.get('asu');
+    var memek = CryptoJS.AES.decrypt(rigan, "Bacot Kau Asu");
+    var jancuk = atob(rigan);
+    var jancukk = atob(jancuk);
+    var jancukkk = atob(jancukk)
+ 		var counter = 4;
+ 		function getLink(){
+ 		  window.open(jancukkk, "_top");
+ 		}
+		function countDown(){
+			if(counter >= 0){
+				document.getElementById("timer").innerHTML = counter;
+			} else {
+				download();
+				return;
+			}
+			counter -=1;
+ 
+			var counter2 = setTimeout("countDown()",1000);
+			return;
+		}
+ 
+		function download(){
+			document.getElementById("link").innerHTML = "<button onclick='getLink()' class='btn'>Continue</button>";
+		}
 	</script>
 </head>
 <body onload="countDown();" oncontextmenu="return false;">
